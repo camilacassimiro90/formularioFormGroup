@@ -9,33 +9,10 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class AppComponent implements OnInit {
   title = 'CheckoutForm';
 
-  formPurchase = new FormGroup({
-    firstName: new FormControl(),
-    lastName: new FormControl(),
-    userName: new FormControl(),
-    email: new FormControl(),
-    adress: new FormControl(),
-    adress2: new FormControl(),
-    zip: new FormControl(),
-    formPayment: new FormGroup({
-      card: new FormControl(),
-      nameCard: new FormControl(),
-      cardNumber: new FormControl(),
-      expiration: new FormControl(),
-      cvv: new FormControl(),
-
-    })
-  });
-
   ngOnInit() {
 
-    console.log(this.formPurchase);
-  }
 
-  mostraValor() {
-    console.log(this.formPurchase);
   }
-
 }
 
 
