@@ -1,8 +1,6 @@
-<!-- Custom styles for this template -->
+<!-- <app-exercicio-form-builder></app-exercicio-form-builder> -->
 <!DOCTYPE html>
 <html lang="en">
-  <!-- <link href="form-validation.css" rel="stylesheet" /> -->
-
   <body class="bg-light">
     <div class="container">
       <main>
@@ -239,8 +237,10 @@
                 <div class="my-3">
                   <div class="form-check">
                     <input
+                      formControlName="card"
+                      value="credit"
                       id="credit"
-                      name="paymentMethod"
+                      name="card"
                       type="radio"
                       class="form-check-input"
                       checked
@@ -252,8 +252,10 @@
                   </div>
                   <div class="form-check">
                     <input
+                      formControlName="card"
+                      value="debit"
                       id="debit"
-                      name="paymentMethod"
+                      name="card"
                       type="radio"
                       class="form-check-input"
                       required
@@ -264,8 +266,10 @@
                   </div>
                   <div class="form-check">
                     <input
+                      formControlName="card"
+                      value="paypal"
                       id="paypal"
-                      name="paymentMethod"
+                      name="card"
                       type="radio"
                       class="form-check-input"
                       required

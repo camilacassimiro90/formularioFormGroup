@@ -8,7 +8,6 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
   title = 'CheckoutForm';
-  // purchase!: FormGroup;
 
   formPurchase = new FormGroup({
     firstName: new FormControl(),
@@ -19,6 +18,7 @@ export class AppComponent implements OnInit {
     adress2: new FormControl(),
     zip: new FormControl(),
     formPayment: new FormGroup({
+      card: new FormControl(),
       nameCard: new FormControl(),
       cardNumber: new FormControl(),
       expiration: new FormControl(),
