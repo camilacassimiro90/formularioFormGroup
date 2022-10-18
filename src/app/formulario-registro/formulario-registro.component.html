@@ -1,0 +1,69 @@
+<div class="cadastro" class="col">
+  <h2>Cadastro</h2>
+  <form>
+    <div class="formgroup-inline">
+      <div class="row g-3">
+        <div class="col">
+          <label for="">Nome</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nome"
+            aria-label="Nome"
+          />
+        </div>
+        <div class="col">
+          <label for="">Carga horária de horas aula</label>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Carga Horaria"
+            aria-label="Carga Horaria"
+          />
+        </div>
+        <div class="row mb-3 text-center">
+          <label for="email" class="label">Escola</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Escola"
+            aria-label="Escola"
+          />
+        </div>
+        <div class="row mb-3 text-center">
+          <label for="Email" class="label">Email</label>
+          <input
+            type="Email"
+            class="form-control"
+            placeholder="Email"
+            aria-label="Email"
+          />
+        </div>
+        <label for="professor" class="form-label text">Professor</label>
+        <select
+          formControlName="professor"
+          class="form-select"
+          name="professor"
+          id="professor"
+        >
+          <option disabled selected>Seleciona um professor</option>
+          <option value="otavio">Otávio</option>
+          <option value="vivian">Vivian</option>
+          <option value="leandro">Leandro</option>
+          <option value="claudia">Cláudia</option>
+        </select>
+      </div>
+      <div class="my-3">
+        <div class="form-check">
+          <input formControlName="materia"  id="obrigatorio" name="materia" type="radio" class="form-check-input"  required="" value="obrigatorio">
+          <label class="form-check-label text" for="obrigatorio">Matéria Obrigatória</label>
+        </div>
+        <div class="form-check">
+          <input formControlName="materia" id="opcional" name="materia" type="radio" class="form-check-input" required="" value="opcional">
+          <label class="form-check-label text" for="opcional">Matéria Opcional</label>
+        </div>
+       
+    </div>
+    </div>
+  </form>
+</div>

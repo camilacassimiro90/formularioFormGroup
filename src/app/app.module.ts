@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExercicioFormBuilderComponent } from './exercicio-form-builder/exercicio-form-builder.component';
 import { FormGroupPaymentComponent } from './form-group-payment/form-group-payment.component';
+import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExercicioFormBuilderComponent,
-    FormGroupPaymentComponent
+    FormGroupPaymentComponent,
+    FormularioRegistroComponent
   ],
   imports: [
     BrowserModule,
