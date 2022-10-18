@@ -1,11 +1,12 @@
-<div class="cadastro" class="col">
+<div class="registro" class="col">
   <h2>Cadastro</h2>
-  <form>
+  <form [formGroup]="formRegistro">
     <div class="formgroup-inline">
       <div class="row g-3">
         <div class="col">
           <label for="">Nome</label>
           <input
+          formControlName="nome"
             type="text"
             class="form-control"
             placeholder="Nome"
@@ -15,6 +16,7 @@
         <div class="col">
           <label for="">Carga horária de horas aula</label>
           <input
+          formControlName="cargaHoraria"
             type="number"
             class="form-control"
             placeholder="Carga Horaria"
@@ -24,6 +26,7 @@
         <div class="row mb-3 text-center">
           <label for="email" class="label">Escola</label>
           <input
+          formControlName="escola"
             type="text"
             class="form-control"
             placeholder="Escola"
@@ -33,6 +36,7 @@
         <div class="row mb-3 text-center">
           <label for="Email" class="label">Email</label>
           <input
+          formControlName="email"
             type="Email"
             class="form-control"
             placeholder="Email"
