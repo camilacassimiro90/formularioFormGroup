@@ -12,6 +12,9 @@
             placeholder="Nome"
             aria-label="Nome"
           />
+          <div *ngIf="formRegistro.controls['nome'].dirty && formRegistro.controls['nome'].invalid" class="alert alert-danger">
+            O nome deve conter no mínimo 3 letras
+        </div>
         </div>
         <div class="col">
           <label for="">Carga horária de horas aula</label>
@@ -22,6 +25,9 @@
             placeholder="Carga Horaria"
             aria-label="Carga Horaria"
           />
+          <div *ngIf="formRegistro.controls['cargaHoraria'].dirty && formRegistro.controls['cargaHoraria'].invalid" class="alert alert-danger">
+            A carga horária deve ser entre 30 e 100 horas
+        </div>
         </div>
         <div class="row mb-3 text-center">
           <label for="email" class="label">Escola</label>
@@ -32,6 +38,9 @@
             placeholder="Escola"
             aria-label="Escola"
           />
+          <div *ngIf="formRegistro.controls['escola'].dirty && formRegistro.controls['escola'].invalid" class="alert alert-danger">
+            A escola deve conter no mínimo 3 letras
+        </div>
         </div>
         <div class="row mb-3 text-center">
           <label for="Email" class="label">Email</label>
@@ -56,6 +65,9 @@
           <option value="leandro">Leandro</option>
           <option value="claudia">Cláudia</option>
         </select>
+        <div *ngIf="formRegistro.controls['professor'].dirty && formRegistro.controls['professor'].invalid" class="alert alert-danger">
+          O professor é obrigatório
+      </div>
       </div>
       <div class="my-3">
         <div class="form-check">
@@ -66,6 +78,26 @@
           <input formControlName="materia" id="opcional" name="materia" type="radio" class="form-check-input" required="" value="opcional">
           <label class="form-check-label text" for="opcional">Matéria Opcional</label>
         </div>
+        <div *ngIf="formRegistro.controls['materia'].dirty && formRegistro.controls['materia'].invalid" class="alert alert-danger">
+          Selecione se a matéria é opcional ou obrigatória
+      </div>
+      <div class="d-flex flex-column">
+        <button 
+        class="w-50 btn mt-2" 
+        type="submit" 
+        (click)="mostrar()"
+        [disabled]="formRegistro.invalid" 
+        [ngClass]="{'btn-success' : formRegistro.valid, 'btn-light' : formRegistro.invalid}"
+        >
+        Enviar
+        </button>
+        <button 
+        class="w-50 btn mt-2 btn-danger"
+        type="button"
+        (click)="resetarForm()"
+        >Limpar Formulário
+        </button>
+    </div>
        
     </div>
     </div>
