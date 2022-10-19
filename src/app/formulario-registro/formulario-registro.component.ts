@@ -12,9 +12,9 @@ export class FormularioRegistroComponent implements OnInit {
   formRegistro = new FormGroup({
     nome: new FormControl("", [Validators.required, Validators.minLength(3), Validators.pattern('^[A-Za-z]*$')]),
     cargaHoraria: new FormControl("", [Validators.required, Validators.min(30), Validators.max(100)]),
-    escola: new FormControl('SENAI/SC - Serviço Nacional de Aprendizagem Industrial', [Validators.required, Validators.minLength(3), Validators.pattern('^[@!#$%-^&*A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ/s ]*$')]),
-    email: new FormControl('', [Validators.required]),
-    professor: new FormControl(""),
+    escola: new FormControl('SENAI/SC'),
+    email: new FormControl('', [Validators.required, Validators.minLength(3), Validators.pattern('^[@!#$%-^&*A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ/s ]*$')]),
+    professor: new FormControl('', [Validators.required]),
     materia: new FormControl('', [Validators.required]),
 
   });
